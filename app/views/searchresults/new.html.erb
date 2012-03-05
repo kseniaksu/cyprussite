@@ -1,0 +1,139 @@
+
+<%= javascript_include_tag "mobilyslider.js" %>
+<%= stylesheet_link_tag    "slider" %>
+<script>
+$(function(){
+
+	$('.slider1').mobilyslider({
+      content: '.sliderContent', 		// класс для контейнера слайдера
+      children: 'div', 					// селектор слайдов
+      transition: 'fade', 			// эффект перехода между слайдами: horizontal, vertical, fade
+      animationSpeed: 1500, 				// скорость перехода между слайдами в ms
+      autoplay: true,					// включение автопроигрывания
+      autoplaySpeed: 2900, 				// время показа слайда в ms
+      pauseOnHover: false, 				// остановка автопроигрывания при наведении курсора мыши
+      bullets: true, 					// генерация указателя слайдов (true/false, класс: sliderBullets)
+      arrows: true, 						// генерация стрелок вперед/назад (true/false, класс: sliderArrows)
+      arrowsHide: false, 					// выводим стрелки только при наведении курсора мыши
+      prev: 'prev', 						// имя класса для кнопки назад
+      next: 'next', 						// имя класса для кнопки вперед
+      animationStart: function(){}, 		// возвратная функция, которая вызывается при запуске перехода между слайдами
+      animationComplete: function(){} 	// возвратная функция, которая вызывается после завершения перехода между слайдами
+  });
+
+});
+</script>
+<div class="left">
+<div class="container_12 main_img_container">	
+	<div class="slider slider1">
+		<div class="sliderContent">
+						    
+			<div class="item" style="display: none;">
+			    <div class="slider_container">
+			    	<div class="body">
+                          <div class="slider_image">
+	                    	<img src="main_img.jpg" alt="недвижимость на кипре" />
+						  </div>
+							<h1></h1>							        
+			         </div>
+			     </div>
+			   </div>
+			
+			<div class="item" style="display: none;">
+			    <div class="slider_container">
+			    	<div class="body">
+                          <div class="slider_image">
+	                    	<img src="cme.jpg" alt="недвижимость на кипре" />
+						  </div>
+							<h1></h1>							        
+			         </div>
+			     </div>
+			   </div>
+			
+			<div class="item" style="display: none;">
+			    <div class="slider_container">
+			    	<div class="body">
+                          <div class="slider_image">
+	                    	<img src="cme2.jpg" alt="недвижимость на кипре" />
+						  </div>
+							<h1></h1>							        
+			         </div>
+			     </div>
+			   </div>
+			
+			<div class="item" style="display: none;">
+			    <div class="slider_container">
+			    	<div class="body">
+                          <div class="slider_image">
+	                    	<img src="cme.jpg" alt="недвижимость на кипре" />
+						  </div>
+							<h1></h1>							        
+			         </div>
+			     </div>
+			   </div>			
+						    			
+		</div>
+	</div>	
+ </div>
+
+<div class="clear"></div>
+<div class="bottom_shadow"></div>
+</div>
+
+
+<div class="right">
+	<div class="search_container">
+
+		<%= render 'form' %>
+
+		<%#= link_to 'Back', searchresults_path %>
+	</div>	
+</div>
+<div class="clear"></div>
+<h1>Hаши лучшие предложения</h1>
+</br>
+<ul class="best_container">
+	<% @properties.each do |property| %>
+	<%-if property.onmain? %>
+	<li>
+		<div class="best_box">
+		  <%= link_to image_tag(property.photo.url(:medium)), property %>	
+		  <%#= image_tag property.photo.url(:medium) %>			  	
+	    </div>
+	    <div class="best_shadow"> 
+		</div>
+		<h2><%= link_to property.name, property %></h2>
+		<p><%= property.shortdescription %></p>
+	</li>
+	<% end%>
+	  <% end%>
+	    <div class="clear"></div>
+	</ul>
+	   <div class="clear"></div>
+<div class="clear hr"></div>	
+<h1>Hедвижимость на Кипре</h1>
+<p>Если Вы решили приобрести объект недвижимости на Кипре, но Вы не настолько богаты, чтобы покупать некачественное, обращайтесь в компанию L&S. Мы будем Вам рады.</p>
+<p>Если Вы решили приобрести объект недвижимости на Кипре, но Вы не настолько богаты, чтобы покупать некачественное, обращайтесь в компанию L&S. Мы будем Вам рады.</p>
+
+<script type="text/javascript">
+	$(document).ready(function(){	
+
+		if (!$.browser.opera) {
+    
+			// select element styling
+			$('select.select').each(function(){
+				var title = $(this).attr('title');
+				if( $('option:selected', this).val() != ''  ) title = $('option:selected',this).text();
+				$(this)
+					.css({'z-index':10,'opacity':0,'-khtml-appearance':'none'})
+					.after('<span class="select">' + title + '</span>')
+					.change(function(){
+						val = $('option:selected',this).text();
+						$(this).next().text(val);
+						})
+			});
+
+		};
+		
+	});
+</script>

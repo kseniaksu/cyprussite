@@ -1,0 +1,56 @@
+<div class="sort"> 
+<div class="left"> <span>Список вех предложений </span></div>
+
+	<div class="right"> 
+<%= link_to "Цене", "/catalog_price" %>
+    </div>
+   <div class="right">
+<%= link_to "Типу", "/catalog_type", :class=>"active" %>
+  </div>
+
+<div class="right"><span>Сортировать по:</span>
+</div>
+
+</div>
+<div class="clear"> </div>
+
+
+
+<% twis= @properties.all(:order => "realtytype") %>
+<% twis.each do |property| %>
+<!--_______________________________ start_________________________________-->  
+    <div class="catalog_container">
+	    <h1><%= link_to property.name, property %></h1>
+	    <div class="c_photo left">
+		  <%= image_tag property.photo.url(:medium) %>
+		</div>
+		<div class="left">
+		    <div class="direct_info">
+				<p>
+				  <b class="title">Место положения:</b>
+				  <%= property.location %>
+				</p>
+				<p>
+				  <b class="title">Количество спален:</b>
+				  <%= property.roomcount %>
+				</p>
+				<p> <b class="title">Тип:</b>
+				  <%= property.realtytype %>
+				</p>
+				<p class="c_price"> <b class="title c_price">Цена:</b>
+				<%= property.price %>
+				</p>
+		    </div>
+	    </div>
+	   <div class="left">
+	        <div class="shortdescription">
+		        <p>
+	            <%= property.shortdescription %>
+	            </p>  
+	        </div>
+        </div>
+        <div class="clear"></div>
+        <%= link_to "Подробнее", property , :class=> "more"%>
+    </div>
+<!---_______________________________ end _______________________________-->  
+	<% end%>

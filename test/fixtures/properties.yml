@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  realtytype: MyString
+  location: MyString
+  roomcount: MyString
+  price: 1
+  fulldescription: MyText
+  observe: MyText
+  shortdescription: MyText
+  onmain: false
+
+two:
+  name: MyString
+  realtytype: MyString
+  location: MyString
+  roomcount: MyString
+  price: 1
+  fulldescription: MyText
+  observe: MyText
+  shortdescription: MyText
+  onmain: false

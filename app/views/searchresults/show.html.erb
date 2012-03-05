@@ -1,0 +1,92 @@
+<div class="sort"> 
+<div class="left"><span> Результаты поиска </span></div>
+
+	<div class="right"> 
+<%= link_to "Посмотреть все предложения", "/catalog" %>
+    </div>
+
+<div class="clear"> </div>
+</div>
+<div class="clear"> </div>
+
+<% @properties.each do |property| %>
+  <div>    
+    <%-if @searchresult.realtytype == property.realtytype and @searchresult.location == property.location and  @searchresult.roomcount == property.roomcount and @searchresult.priceline >= property.price %>
+<!--_______________________________ start_________________________________-->  
+    <div class="catalog_container">
+	    <h1><%= link_to property.name, property %></h1>
+	    <div class="c_photo left">
+		  <%= image_tag property.photo.url(:medium) %>
+		</div>
+		<div class="left">
+		    <div class="direct_info">
+				<p>
+				  <b class="title">Место положения:</b>
+				  <%= property.location %>
+				</p>
+				<p>
+				  <b class="title">Количество спален:</b>
+				  <%= property.roomcount %>
+				</p>
+				<p> <b class="title">Тип:</b>
+				  <%= property.realtytype %>
+				</p>
+				<p> <b class="title c_price">Цена:</b>
+				<%= property.price %>
+				</p>
+		    </div>
+	    </div>
+        <div class="left shortdescription">
+	        <p>
+            <%= property.shortdescription %>
+            </p>  
+        </div>
+        <div class="clear"></div>
+        <%= link_to "Подробнее", property , :class=> "more"%>
+    </div>
+<!---_______________________________ end _______________________________-->  
+    <%-else%>
+      <%-if (@searchresult.realtytype == property.realtytype and @searchresult.location == property.location and  @searchresult.roomcount == property.roomcount) or (@searchresult.realtytype == property.realtytype and @searchresult.location == property.location and @searchresult.priceline >= property.price)%>
+<!--_______________________________ start_________________________________-->  
+    <div class="catalog_container">
+	    <h1><%= link_to property.name, property %></h1>
+	    <div class="c_photo left">
+		  <%= image_tag property.photo.url(:medium) %>
+		</div>
+		<div class="left">
+		    <div class="direct_info">
+				<p>
+				  <b class="title">Место положения:</b>
+				  <%= property.location %>
+				</p>
+				<p>
+				  <b class="title">Количество спален:</b>
+				  <%= property.roomcount %>
+				</p>
+				<p> <b class="title">Тип:</b>
+				  <%= property.realtytype %>
+				</p>
+				<p> <b class="title c_price">Цена:</b>
+				<%= property.price %>
+				</p>
+		    </div>
+	    </div>
+        <div class="left shortdescription">
+	        <p>
+            <%= property.shortdescription %>
+            </p>  
+        </div>
+        <div class="clear"></div>
+        <%= link_to "Подробнее", property , :class=> "more"%>
+    </div>
+<!---_______________________________ end _______________________________-->     
+	  <%-end%>
+    
+    <%-end %>
+    
+  </div>
+<% end %>
+
+
+<%#= link_to 'Edit', edit_searchresult_path(@searchresult) %> 
+<%#= link_to 'Back', searchresults_path %>

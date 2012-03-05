@@ -1,0 +1,20 @@
+<div class="header">
+	<div class="content_header">
+		<ul class="nav">
+			<li>
+				<%= link_to "Главная", "/", :class => controller.controller_name.to_s == "searchresults" ? "active": "" %>
+			    </li>
+			<li>
+				<%= link_to "Каталог", "/catalog", :class => controller.controller_name.to_s == "catalog" ? "active": "" %>
+			    </li>
+			<li>
+				<%= link_to "О Кипре", "/about" , :class => controller.controller_name.to_s == "about" ? "active": "" %>
+			    </li>
+			<li>
+				<%= link_to "Контакты", "/contact", :class => controller.controller_name.to_s == "contact" ? "active": "" %>
+			    </li>		
+			</ul>
+	     <div class="logo">
+		  </div>
+		</div>  
+	</div>

@@ -1,0 +1,40 @@
+<div class="search_selects">
+<%= form_for(@searchresult) do |f| %>
+  <% if @searchresult.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@searchresult.errors.count, "error") %> prohibited this searchresult from being saved:</h2>
+
+      <ul>
+      <% @searchresult.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field firstf">
+    <%= f.label "Категория" %>
+    <%#= f.text_field :realtytype %>
+    <%= f.select("realtytype", ['офис', 'квартира', 'особняк', 'вилла', 'другое'], {}, { :class => 'select' })%>
+  </div>
+  <div class="field">
+    <%= f.label "Район" %>
+    <%#= f.text_field :location %>
+    <%= f.select("location", ['Лимассол'], {}, { :class => 'select' })%>
+  </div>
+  <div class="field">
+    <%= f.label "Количество спален" %>
+    <%#= f.text_field :roomcount %>
+    <%= f.select("roomcount", ['2 комнаты', '3 комнаты', '4 комнаты', '5 комнат', '6 комнат'], {}, { :class => 'select' })%>
+  </div>
+  <div class="field">
+    <%= f.label "До какой цены (евро)" %>
+    <%#= f.number_field :priceline , :step => 10000 , :maxlength=>6, :in => 10000...100000 %>
+     <%#= f.number_field 'priceline', nil, :in => 1...10%>
+     <%= f.select("priceline", [10000, 20000, 30000], {}, { :class => 'select' })%>
+  </div>
+  <div class="actions search_btn">
+    <%= f.submit %>
+  </div>
+<% end %>
+  </div>

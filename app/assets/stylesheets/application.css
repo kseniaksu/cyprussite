@@ -1,0 +1,472 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+*/
+@font-face {
+    font-family: Helvetica; /* имя шрифта для CSS правил */
+    src: local("Helvetica"), /* проверяем наличие шрифта в ОС пользователя */
+         url(/Helvetica.ttf); /* если шрифт не установлен, тогда загружаем его по указанному пути */
+
+  }
+html{
+  height: 100%;	
+}
+body {
+  background-image: url(bg.png);
+  color: #005dab;
+  font-family: 'Helvetica','Verdana', 'Trebuchet MS';
+  font-family: url(/Helvetica.ttf);
+  font-size: 13px;
+  line-height: 18px; 
+  margin: 0;
+  position: relative;
+  min-height: 100%;}
+
+p, ol, ul, td {
+  font-family: 'Helvetica','Verdana', 'Trebuchet MS';
+  font-family: url(/Helvetica.ttf);
+  font-size: 13px;
+  line-height: 18px; }
+h1{
+  font-size: 22px;	
+}
+h1, h1 a{
+	color: #005dab;
+	text-decoration: none;
+}
+h2, h2 a{
+  font-size: 16px;	
+  font-weight: 400;
+  	color: #005dab;
+	text-decoration: none;
+}
+ul, ul li{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px; }
+
+a {
+  color: #000;
+  &:visited {
+    color: #666; }
+  &:hover {
+    color: #fff;
+    background-color: #000; } }
+
+div {
+  &.field, &.actions {
+    margin-bottom: 10px; } }
+
+#notice {
+  color: green; }
+
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table; }
+
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+  h2 {
+    text-align: left;
+    font-weight: bold;
+    padding: 5px 5px 5px 15px;
+    font-size: 12px;
+    margin: -7px;
+    margin-bottom: 0px;
+    background-color: #c00;
+    color: #fff; }
+  ul li {
+    font-size: 12px;
+    list-style: square; } }
+/*-----------------TYPE-------------*/
+.left{
+	float: left;
+}
+.right{
+	float: right;
+}
+.clear{
+	clear: both;
+}
+/*-----------------PAGE-------------*/
+.content_page{
+	width: 880px;
+	min-height: 100%;
+	margin: auto;
+	padding-bottom: 140px;
+}
+/*-----------------HEADER-------------*/
+.header{
+	background: url(header_bg.png);
+	height: 123px;
+	width: 100%;
+	margin-bottom: 14px;
+}
+.content_header{
+	width: 880px;
+	margin: auto;	
+	position: relative;
+}
+.logo{
+	width: 330px;
+	height: 104px;
+	background: url(logo.png);
+	position: absolute;
+	top: 3px;
+	right: 0;	
+}
+.nav li{
+	float: left;
+	padding: 47px 13px 0px 9px;	
+}
+.nav li a{
+	display: block;
+	font-size: 14px;
+	text-transform: uppercase;
+	line-height: 14px;
+	text-decoration: none;
+	color: #70d2ff;
+	padding: 8px 14px 7px 14px;
+}
+
+.nav li a:hover {
+	color: #abe1fa;
+	
+		
+}
+.nav li a.active{
+	background: #00579c;
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-box-shadow: inset -2px 2px 4px #003772;
+	-webkit-box-shadow: inset -2px 2px 4px #003772;
+	box-shadow: inset -2px 2px 4px #003772;	
+}
+/*-----------------FOOTER------------*/
+.footer{
+	background: url(footer_bg.png);
+	height: 123px;
+	width: 100%;
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	
+}
+/*-------------MAIN PAGE----------*/
+.main_img_container{
+	width: 584px;
+	margin-top: 6px;
+}
+.main_img_box{
+	width: 584px;
+	height: 281px;	
+}
+.bottom_shadow{
+	height: 41px;
+	width: 584px;
+	background: url(button_shadow.png);
+    opacity: 0.5;
+	
+}
+.search_container{
+	width: 253px;
+	height: 268px;
+	background: url(search.png);
+	text-align: center;
+	position: relative;
+	padding-top: 27px;
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+}
+.search_container label{
+	color: #fff;
+	
+}
+.search_btn input{
+    background: url(search_btn.png);	
+    width: 101px;
+	height: 36px;
+	text-indent: 10000px;
+	position: absolute;
+	bottom: -20px;
+    left: 82px;
+    border: none;
+    outline: 0;
+    cursor: pointer;
+}
+
+ul.best_container{
+	margin: 0px;
+	padding: 0px;
+}
+.best_container li{
+	float: left;
+	margin: 0px 49px 0px 0px;
+	list-style: none;
+	width: 184px;	
+}
+.best_container h2{
+	margin-bottom: 0px;
+	
+}
+.best_container p{
+	margin-top: 5px;
+	
+}
+.best_container li:nth-child(4n){
+	margin: 0px;
+}
+.best_container li h2{
+	line-height: 16px;
+	margin-top: 0px;
+}
+.best_container li h2, .best_container li p{
+	display: block;
+	padding-left: 25px;
+	
+}
+.best_container li .best_box{
+	width: 174px;
+	height: 94px;
+	padding: 4px;
+	border: 1px solid #ededed;
+	border-bottom: none;
+}
+.best_container li .best_box img{
+	width: 174px;
+	height: 94px;
+}
+.best_shadow {
+	width: 184px;
+	height: 29px;
+	background: url(best_shadow.png);
+	opacity: 0.3;
+}
+.hr{
+	width: 100%;
+	height: 3px;
+	background: #004d9d;
+	border-top: 1px solid #90aece;
+	border-bottom: 1px solid #90aece;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+select{
+	border: none!important;
+	background: #105f9d;
+	background: url(price_bg.png);
+	width: 175px;
+	height: 23px;
+	color: #fff;
+}
+/*-------select--------*/
+.search_selects .field{position:relative;} 
+
+/* setting the width and height of the SELECT element to match the replacing graphics */
+select.select{
+		position:relative;
+		z-index:10;
+		width:166px !important;
+		height:26px !important;
+		line-height:26px;
+		color: #fff;
+		cursor: pointer;
+}
+
+
+/* dynamically created SPAN, placed below the SELECT */
+span.select{
+	position:absolute;
+	bottom:0;
+	float:left;
+	left:43px;
+	width:173px;
+	height:26px;
+	line-height:26px;
+	text-indent:1px;
+	background:url(bg_select.png) no-repeat 0 0;
+	cursor:default;
+	z-index:1;
+	color: #fff;
+	cursor: pointer;
+	}
+	
+/* first variation (LABEL is above the SELECT) */	
+.search_selects .field label{display:block;line-height:14px; padding-top: 13px; padding-bottom: 6px;}
+.search_selects .field.firstf label{ padding-top: 0px;}
+
+/*___________info______________*/
+.show_info{
+   width: 422px;
+   min-height: 440px;
+   position: relative; 	
+}
+.direct_info{
+	width: 240px;
+}
+.direct_info p{
+	color: #707070;
+	font-size: 12px;
+	margin: 5px 0px 5px 0px;
+	
+}
+.price_box{
+	color: #fff;
+	font-size: 14px;
+	line-height: 14px;
+	padding: 10px 14px 10px 14px;
+	background: url(price_bg.png);
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	display: inline;
+	position: absolute;
+	top: 50px;
+	right: 17px;
+	text-shadow: 0px -1px 0px #0c3451;
+	-moz-text-shadow: 0px -1px 0px #0c3451;
+	-webkit-text-shadow: 0px -1px 0px #0c3451;
+}
+/*_________catalog_________*/
+.catalog_container{
+	padding-bottom: 16px;
+	margin-bottom: 20px;
+	border-bottom: 1px solid #ededed;
+	position: relative;
+}
+.catalog_container .direct_info {
+	width: 180px;
+	padding: 0px 21px 0px 0px;
+	
+}
+.c_price{
+	color: #005dab;
+}
+.c_photo{
+	margin: 10px 21px 0px 0px;
+	width: 154px;
+}
+.shortdescription{
+	padding: 0px 51px 12px 0px;
+	width: 454px;
+}
+.shortdescription p{
+  margin: 5px 0px 5px 0px;	
+}
+.more{
+	color: #fff;
+	font-size: 12px;
+	line-height: 12px;
+	padding: 5px 10px 5px 10px;
+	background: url(price_bg.png);
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	display: inline;
+	position: absolute;
+	bottom: 12px;
+	right: 51px;
+	text-shadow: 0px -1px 0px #0c3451;
+	-moz-text-shadow: 0px -1px 0px #0c3451;
+	-webkit-text-shadow: 0px -1px 0px #0c3451;	
+	text-decoration: none;
+}
+.more:hover{
+	color: #d1dce8;
+}
+/*-----pages------*/
+.pages_direct_info p{
+	color: #707070;
+	margin: 5px 0px 5px 0px;
+}
+.pages_direct_info b{
+	padding-right: 8px;
+}
+.pages .best_container{
+	margin-top: 45px;
+}
+.pages .best_container li .best_box, .pages .best_container li .best_box img{
+	width: 236px;
+	height: 137px;
+}
+.pages .best_container li{
+	width: 246px;
+	margin: 0px 72px 0px 0px;
+	
+}
+.pages .best_container li:nth-child(3n){
+	margin: 0px;
+}
+
+.pages .best_shadow {
+width: 246px;
+height: 26px;
+background: url(pages_best_shadow.png);
+opacity: 0.5;
+}
+.pages{
+	position:relative;
+}
+.cyprus_img{
+	width: 268px;
+	height: 162px;
+	background: url(cyprus.png);
+	position: absolute;
+	top: -12px;
+	right: 15px;
+	
+}
+.pages h2{
+	margin-top: 35px;
+	margin-bottom: 0px;
+	font-weight: 600;
+}
+ 
+.sort, .sort a{
+	color: #000;
+	text-decoration: none;
+	
+}
+.sort a{
+	display: block;
+    border-radius: 9px;
+    -moz-border-radius: 9px;
+    -webkit- border-radius: 9px;
+   padding: 5px 7px 6px 7px;
+   font-size: 12px;
+   line-height: 12px;
+   margin-left: 12px;
+}
+.sort a:hover{
+	background: #f2f2f2;
+	
+}
+.sort a.active{
+	background: #dddddd;
+}
+.sort span{
+	line-height: 20px!important;
+	padding-top: 5px;
+}

@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  realtytype: MyString
+  location: MyString
+  roomcount: MyString
+  priceline: 1
+
+two:
+  realtytype: MyString
+  location: MyString
+  roomcount: MyString
+  priceline: 1

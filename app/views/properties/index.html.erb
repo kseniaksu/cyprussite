@@ -1,0 +1,31 @@
+<h1>Listing properties</h1>
+<% @properties.each do |property| %>
+  
+    
+    <div class="td"><b>Name</b></br><%= property.name %></div>
+    <div class="td">
+    <%- if property.photo?%>
+    <div class="left"><%= image_tag property.photo.url(:small) %></div>
+     <%- end%>
+    <%- if property.photo1?%>
+    <div class="left"><%= image_tag property.photo1.url(:small) %></div>    
+    <%- end%>
+     <div class="clear"></div>
+    </div>
+    <div class="td"><b>Realtytype</b></br><%= property.realtytype %></div>
+    <div class="td"><b>Location</b></br><%= property.location %></div>
+    <div class="td"><b>Roomcount</b></br><%= property.roomcount %></div>
+    <div class="td"><b>Price</b></br><%= property.price %></div>
+    <div class="td"><b>Fulldescription</b></br><%= property.fulldescription %></div>
+    <div class="td"><b>Observe</b></br><%= property.observe %></div>
+    <div class="td"><b>Shortdescription</b></br><%= property.shortdescription %></div>
+    <div class="td"><b>Onmain</b></br><%= property.onmain %></div>
+
+    	<div class="td"><%= link_to 'Show', property %> | <%= link_to 'Edit', edit_property_path(property) %> | <%= link_to 'Destroy', property, confirm: 'Are you sure?', method: :delete %></div>
+  <div class="hr"></div>
+  
+<% end %>
+
+<br />
+
+<%= link_to 'New Property', new_property_path %>

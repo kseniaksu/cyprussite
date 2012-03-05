@@ -1,0 +1,29 @@
+<h1>Listing searchresults</h1>
+
+<table>
+  <tr>
+    <th>Realtytype</th>
+    <th>Location</th>
+    <th>Roomcount</th>
+    <th>Priceline</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @searchresults.each do |searchresult| %>
+  <tr>
+    <td><%= searchresult.realtytype %></td>
+    <td><%= searchresult.location %></td>
+    <td><%= searchresult.roomcount %></td>
+    <td><%= searchresult.priceline %></td>
+    <td><%= link_to 'Show', searchresult %></td>
+    <td><%= link_to 'Edit', edit_searchresult_path(searchresult) %></td>
+    <td><%= link_to 'Destroy', searchresult, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Searchresult', new_searchresult_path %>

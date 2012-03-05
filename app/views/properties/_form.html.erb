@@ -1,0 +1,83 @@
+<%= form_for(@property) do |f| %>
+  <% if @property.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@property.errors.count, "error") %> prohibited this property from being saved:</h2>
+
+      <ul>
+      <% @property.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+ <div class="field">
+  <%= f.file_field :photo %>
+   </div>
+ <div class="field">
+  <%= f.file_field :photo1 %>
+   </div>
+ <div class="field">
+  <%= f.file_field :photo2 %>
+   </div>
+ <div class="field">
+  <%= f.file_field :photo3 %>
+   </div>
+ <div class="field">
+  <%= f.file_field :photo4 %>
+   </div>
+ <div class="field">
+  <%= f.file_field :photo5 %>
+   </div>
+ <div class="field">
+  <%= f.file_field :photo6 %>
+   </div>
+ <div class="field">
+  <%= f.file_field :photo7 %>
+   </div>
+
+
+  <div class="field">
+    <%= f.label :codename %><br />
+    <%= f.text_field :codename %>
+  </div>
+  <div class="field">
+    <%= f.label :realtytype %><br />
+    <%= f.text_field :realtytype %>
+  </div>
+  <div class="field">
+    <%= f.label :location %><br />
+    <%= f.text_field :location %>
+  </div>
+  <div class="field">
+    <%= f.label :roomcount %><br />
+    <%= f.text_field :roomcount %>
+  </div>
+  <div class="field">
+    <%= f.label :price %><br />
+    <%= f.number_field :price %>
+  </div>
+  <div class="field">
+    <%= f.label :fulldescription %><br />
+    <%= f.text_area :fulldescription %>
+  </div>
+  <div class="field">
+    <%= f.label :observe %><br />
+    <%= f.text_area :observe %>
+  </div>
+  <div class="field">
+    <%= f.label :shortdescription %><br />
+    <%= f.text_area :shortdescription %>
+  </div>
+  <div class="field">
+    <%= f.label :onmain %><br />
+    <%= f.check_box :onmain %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

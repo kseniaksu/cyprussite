@@ -38,3 +38,4 @@ gem 'jquery-rails'
 # gem 'ruby-debug19', :require => 'ruby-debug'
 gem "paperclip", "~> 2.0"
 gem "aws-sdk", "~> 1.3.5"
+gem "pg", :group => :prodaction

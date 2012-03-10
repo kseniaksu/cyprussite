@@ -229,7 +229,7 @@ ul.best_container{
 }
 .best_container li{
 	float: left;
-	margin: 0px 49px 0px 0px;
+	margin: 0px 47px 0px 0px;
 	list-style: none;
 	width: 184px;	
 }
@@ -368,7 +368,7 @@ span.select{
 	
 }
 .c_price{
-	color: #005dab;
+	color: #005dab!important;
 }
 .c_photo{
 	margin: 10px 21px 0px 0px;
@@ -419,7 +419,7 @@ span.select{
 }
 .pages .best_container li{
 	width: 246px;
-	margin: 0px 72px 0px 0px;
+	margin: 0px 70px 0px 0px;
 	
 }
 .pages .best_container li:nth-child(3n){

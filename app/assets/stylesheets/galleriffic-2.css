@@ -191,7 +191,6 @@ div.pagination a:hover {
 }
 div.pagination span.current {
 	font-weight: bold;
-	background-color: #000;
 	border-color: #000;
 	color: #fff;
 }

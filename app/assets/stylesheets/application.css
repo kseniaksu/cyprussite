@@ -50,7 +50,8 @@ h2, h2 a{
 	text-decoration: none;
 }
 a:hover{
-	background: none!important;
+	background: none;
+	color: #005dab;
 }
 ul, ul li{
 	list-style: none;

@@ -204,6 +204,9 @@ div {
 	color: #fff;
 	
 }
+.search_container .field{
+	margin: 0!important;
+}
 .search_btn input{
     background: url(search_btn.png);	
     width: 101px;

@@ -51,7 +51,7 @@ h2, h2 a{
 }
 a:hover{
 	background: none!important;
-	color: #005dab!important;
+
 }
 ul, ul li{
 	list-style: none;
@@ -383,7 +383,7 @@ span.select{
   margin: 5px 0px 5px 0px;	
 }
 .more{
-	color: #fff;
+	color: #fff!important;
 	font-size: 12px;
 	line-height: 12px;
 	padding: 5px 10px 5px 10px;

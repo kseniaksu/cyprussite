@@ -49,6 +49,9 @@ h2, h2 a{
   	color: #005dab;
 	text-decoration: none;
 }
+a:hover{
+	background: none!important;
+}
 ul, ul li{
 	list-style: none;
 	margin: 0;

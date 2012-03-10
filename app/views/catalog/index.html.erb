@@ -3,7 +3,7 @@
 <% @properties.each do |property| %>
 <!--_______________________________ start_________________________________-->  
     <div class="catalog_container">
-	    <h1><%= link_to property.name, property, :class="a_title" %></h1>
+	    <h1><%= link_to property.name, property, :class=>"a_title" %></h1>
 	    <div class="c_photo left">
 		  <%= image_tag property.photo.url(:medium) %>
 		</div>

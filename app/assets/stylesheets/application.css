@@ -151,7 +151,7 @@ div {
 
 .nav li a:hover {
 	color: #abe1fa;
-	
+	background: none!important;
 		
 }
 .nav li a.active{

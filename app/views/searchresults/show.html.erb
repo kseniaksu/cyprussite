@@ -14,7 +14,7 @@
     <%-if @searchresult.realtytype == property.realtytype and @searchresult.location == property.location and  @searchresult.roomcount == property.roomcount and @searchresult.priceline >= property.price %>
 <!--_______________________________ start_________________________________-->  
     <div class="catalog_container">
-	    <h1><%= link_to property.name, property %></h1>
+	    <h1><%= link_to property.name, property, :class="a_title" %></h1>
 	    <div class="c_photo left">
 		  <%= image_tag property.photo.url(:medium) %>
 		</div>
@@ -49,7 +49,7 @@
       <%-if (@searchresult.realtytype == property.realtytype and @searchresult.location == property.location and  @searchresult.roomcount == property.roomcount) or (@searchresult.realtytype == property.realtytype and @searchresult.location == property.location and @searchresult.priceline >= property.price)%>
 <!--_______________________________ start_________________________________-->  
     <div class="catalog_container">
-	    <h1><%= link_to property.name, property %></h1>
+	    <h1><%= link_to property.name, property, :class="a_title" %></h1>
 	    <div class="c_photo left">
 		  <%= image_tag property.photo.url(:medium) %>
 		</div>

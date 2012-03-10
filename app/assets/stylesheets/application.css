@@ -392,6 +392,10 @@ span.select{
 	color: #d1dce8!important;
 	background: url(price_bg.png)!important;
 }
+
+a.a_title, a.a_title:visited, a.a_title:hover{
+	color: #005DAB!important;
+}
 /*-----pages------*/
 .pages_direct_info p{
 	color: #707070;

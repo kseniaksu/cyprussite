@@ -146,8 +146,8 @@ pre {
 	background: none!important;
 		
 }
-.nav li a.active{
-	background: #00579c;
+.nav li a.active, .nav li a.active:hover{
+	background: #00579c!important;
 	border-radius: 10px;
 	-moz-border-radius: 10px;
 	-webkit-border-radius: 10px;
@@ -365,7 +365,7 @@ span.select{
 }
 .shortdescription{
 	padding: 0px 51px 12px 0px;
-	width: 454px;
+	width: 452px;
 }
 .shortdescription p{
   margin: 5px 0px 5px 0px;	

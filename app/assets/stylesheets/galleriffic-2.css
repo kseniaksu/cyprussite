@@ -1,6 +1,7 @@
 .images_galery{
 	width: 443px;
 	display: block;
+	margin-top: 20px;
 }
 .img_shadow{
 	width: 408px;
@@ -53,7 +54,7 @@ div.controls a {
 #gallery a.next{
 	position: absolute;
 	right: 16px;
-	top: 130px;
+	top: 100px;
 	z-index: 1000;
 	height: 68px;
 	width: 30px;
@@ -61,9 +62,9 @@ div.controls a {
 	background-repeat: no-repeat;
 	display: none;	
 }
-#gallery:hover a.next, #gallery:hover a.prev, #gallery a.next:hover, #gallery a.prev:hover {
+.images_galery #gallery:hover a.next, .images_galery #gallery:hover a.prev, .images_galery #gallery a.next:hover, .images_galery #gallery a.prev:hover {
 	display: block!important;
-	background-position: 0 0;
+	background-position: 0 0!important;
 	
 }
 div.ss-controls {
@@ -103,6 +104,8 @@ div.slideshow a.advance-link {
 	height: 235px;
 	height: 235px; /* This should be set to be at least the height of the largest image in the slideshow */
 	text-align: center;
+	font-size: 0px;
+	
 }
 div.slideshow a.advance-link:hover, div.slideshow a.advance-link:active, div.slideshow a.advance-link:visited {
 	text-decoration: none;
@@ -115,7 +118,7 @@ div.download {
 div.caption-container {
 	position: relative;
 	clear: left;
-	height: 34px;
+	height: 16px;
 }
 span.image-caption {
 	display: block;

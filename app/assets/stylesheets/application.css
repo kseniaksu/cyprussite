@@ -44,8 +44,8 @@ h1, h1 a{
 	text-decoration: none;
 }
 h2, h2 a{
-  font-size: 16px;	
-  font-weight: 400;
+  font-size: 13px;	
+  font-weight: 600;
   	color: #005dab;
 	text-decoration: none;
 }
@@ -242,7 +242,7 @@ ul.best_container{
 }
 .best_container li h2, .best_container li p{
 	display: block;
-	padding-left: 25px;
+	padding-left: 12px;
 	
 }
 .best_container li .best_box{
@@ -258,7 +258,7 @@ ul.best_container{
 }
 .best_shadow {
 	width: 184px;
-	height: 29px;
+	height: 20px;
 	background: url(best_shadow.png);
 	opacity: 0.3;
 }
@@ -292,7 +292,9 @@ select.select{
 		color: #fff;
 		cursor: pointer;
 }
-
+select.select option{
+	color: #000;
+}
 
 /* dynamically created SPAN, placed below the SELECT */
 span.select{

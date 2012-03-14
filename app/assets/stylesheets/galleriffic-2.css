@@ -1,13 +1,13 @@
 .images_galery{
 	width: 443px;
 	display: block;
-	margin-top: 20px;
+	margin-top: 18px;
 }
 .img_shadow{
 	width: 408px;
 	height: 27px;
     position: absolute;
-	bottom: -17px;
+	bottom: -18px;
 	left: 17px;
 	background: url(img_shadow.png);
 }
@@ -25,6 +25,7 @@ div.content {
 }
 #gallery{
 	position: relative;
+	padding-bottom: 18px;
 }
 div.content a, div.navigation a {
 	text-decoration: none;
@@ -42,7 +43,7 @@ div.controls a {
 #gallery a.prev{
 	position: absolute;
 	left: 16px;
-	top: 100px;
+	top: 80px;
 	z-index: 1000;
 	height: 68px;
 	width: 28px;
@@ -54,10 +55,10 @@ div.controls a {
 #gallery a.next{
 	position: absolute;
 	right: 16px;
-	top: 100px;
+	top: 80px;
 	z-index: 1000;
 	height: 68px;
-	width: 30px;
+	width: 28px;
 	background: url(next.png);	
 	background-repeat: no-repeat;
 	display: none;	
@@ -67,6 +68,15 @@ div.controls a {
 	background-position: 0 0!important;
 	
 }
+.images_galery #gallery:hover a.next, .images_galery #gallery a.next:hover {
+	background: url(next.png)!important;
+	
+}
+.images_galery #gallery:hover a.prev, .images_galery #gallery a.prev:hover {
+	background: url(prev.png)!important;
+	
+}
+
 div.ss-controls {
 	float: left;
 	display: none;

@@ -129,7 +129,10 @@ pre {
 }
 .nav li{
 	float: left;
-	padding: 47px 13px 0px 9px;	
+	padding: 41px 13px 0px 9px;	
+}
+.content_header .nav li:first-child{
+  padding: 41px 13px 0px 0px;		
 }
 .nav li a{
 	display: block;
@@ -151,9 +154,9 @@ pre {
 	border-radius: 10px;
 	-moz-border-radius: 10px;
 	-webkit-border-radius: 10px;
-	-moz-box-shadow: inset -2px 2px 4px #003772;
-	-webkit-box-shadow: inset -2px 2px 4px #003772;
-	box-shadow: inset -2px 2px 4px #003772;	
+	-moz-box-shadow: inset 0px -2px 6px #003772;
+	-webkit-box-shadow: inset 0px -2px 6px #003772;
+	box-shadow: inset 0px -2px 6px #003772;	
 }
 /*-----------------FOOTER------------*/
 .footer{
@@ -314,7 +317,7 @@ span.select{
 
 /*___________info______________*/
 .show_info{
-   width: 422px;
+   width: 405px;
    min-height: 440px;
    position: relative; 	
 }
@@ -339,7 +342,7 @@ span.select{
 	display: inline;
 	position: absolute;
 	top: 50px;
-	right: 17px;
+	right: 0px;
 	text-shadow: 0px -1px 0px #0c3451;
 	-moz-text-shadow: 0px -1px 0px #0c3451;
 	-webkit-text-shadow: 0px -1px 0px #0c3451;
@@ -352,7 +355,7 @@ span.select{
 	position: relative;
 }
 .catalog_container .direct_info {
-	width: 180px;
+	width: 220px;
 	padding: 0px 21px 0px 0px;
 	
 }
@@ -364,8 +367,8 @@ span.select{
 	width: 154px;
 }
 .shortdescription{
-	padding: 0px 51px 12px 0px;
-	width: 452px;
+	padding: 0px 0px 12px 0px;
+	width: 457px;
 }
 .shortdescription p{
   margin: 5px 0px 5px 0px;	
@@ -382,7 +385,7 @@ span.select{
 	display: inline;
 	position: absolute;
 	bottom: 12px;
-	right: 51px;
+	right: 0px;
 	text-shadow: 0px -1px 0px #0c3451;
 	-moz-text-shadow: 0px -1px 0px #0c3451;
 	-webkit-text-shadow: 0px -1px 0px #0c3451;	
@@ -469,4 +472,5 @@ opacity: 0.5;
 .sort span{
 	line-height: 20px!important;
 	padding-top: 5px;
+	font-weight: 600;
 }

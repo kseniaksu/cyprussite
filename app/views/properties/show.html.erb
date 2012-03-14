@@ -30,7 +30,7 @@
 						</div>
 					</div>
 				</li>
-
+                <%-if @property.photo1? %>
 				<li>
 					<a class="thumb" name="drop" href="<%= url_for @property.photo1.url%>" title="Title #1">
 						<%= image_tag @property.photo1.url(:small)%>
@@ -40,7 +40,8 @@
 					</div>
 					
 				</li>
-
+				<%-end%>
+                <%-if @property.photo2? %>
 				<li>
 					<a class="thumb" href="<%= url_for @property.photo2.url%>" title="Title #2">
 						<%= image_tag @property.photo2.url(:small)%>
@@ -52,7 +53,8 @@
 						</div>
 					</div>
 				</li>
-
+				<%-end%> 
+                <%-if @property.photo3? %>
 				<li class="li_last">
 					<a class="thumb" href="<%= url_for @property.photo3.url%>" title="Title #3">
 						<%= image_tag @property.photo3.url(:small)%>
@@ -64,7 +66,8 @@
 						</div>
 					</div>
 				</li>
-
+				<%-end%> 
+                <%-if @property.photo4? %>
 				<li>
 					<a class="thumb" href="<%= url_for @property.photo4.url%>" title="Title #4">
 						<%= image_tag @property.photo4.url(:small)%>
@@ -76,6 +79,8 @@
 						</div>
 					</div>
 				</li>
+				<%-end%> 
+				<%-if @property.photo5? %>
 				<li>
 					<a class="thumb" href="<%= url_for @property.photo5.url%>" title="Title #5">
 						<%= image_tag @property.photo5.url(:small)%>
@@ -87,7 +92,8 @@
 						</div>
 					</div>
 				</li>
-
+				    <%-end%>
+                    <%-if @property.photo6? %>
 					<li>
 						<a class="thumb" href="<%= url_for @property.photo6.url%>" title="Title #6">
 							<%= image_tag @property.photo6.url(:small)%>
@@ -99,6 +105,8 @@
 							</div>
 						</div>
 					</li>
+					<%-end%>
+					<%-if @property.photo7? %>
 
 				<li class="li_last">
 					<a class="thumb" href="<%= url_for @property.photo7.url%>" title="Title #7">
@@ -113,6 +121,7 @@
 						<div class="image-desc">Description</div>-->
 					</div>
 				</li>
+				<%-end%>
 			</ul>
 		</div>
 		<div style="clear: both;"></div>

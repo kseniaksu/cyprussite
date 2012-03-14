@@ -392,8 +392,7 @@ span.select{
 	text-decoration: none;
 }
 .more:hover{
-	color: #d1dce8!important;
-	background: url(price_bg.png)!important;
+	background: url(price_bg1.png)!important;
 }
 
 a.a_title, a.a_title:visited, a.a_title:hover{

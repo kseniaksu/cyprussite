@@ -41,7 +41,7 @@ div.controls a {
 #gallery a.prev{
 	position: absolute;
 	left: 16px;
-	top: 130px;
+	top: 100px;
 	z-index: 1000;
 	height: 68px;
 	width: 28px;
@@ -62,7 +62,7 @@ div.controls a {
 	display: none;	
 }
 #gallery:hover a.next, #gallery:hover a.prev, #gallery a.next:hover, #gallery a.prev:hover {
-	display: block;
+	display: block!important;
 	background-position: 0 0;
 	
 }

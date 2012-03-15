@@ -15,7 +15,7 @@
   <div class="field firstf">
     <%= f.label "Категория" %>
     <%#= f.text_field :realtytype %>
-    <%= f.select("realtytype", ['офис', 'квартира', 'особняк', 'вилла', 'другое'], {}, { :class => 'select' })%>
+    <%= f.select("realtytype", ['квартира', 'офис', 'особняк', 'вилла', 'другое'], {}, { :class => 'select' })%>
   </div>
   <div class="field">
     <%= f.label "Район" %>
@@ -25,13 +25,13 @@
   <div class="field">
     <%= f.label "Количество спален" %>
     <%#= f.text_field :roomcount %>
-    <%= f.select("roomcount", ['2 комнаты', '3 комнаты', '4 комнаты', '5 комнат', '6 комнат'], {}, { :class => 'select' })%>
+    <%= f.select("roomcount", ['2 спальни', '3 спальни', '4 спальни', '5 спален', '6 спален'], {}, { :class => 'select' })%>
   </div>
   <div class="field">
     <%= f.label "До какой цены (евро)" %>
     <%#= f.number_field :priceline , :step => 10000 , :maxlength=>6, :in => 10000...100000 %>
      <%#= f.number_field 'priceline', nil, :in => 1...10%>
-     <%= f.select("priceline", [10000, 20000, 30000], {}, { :class => 'select' })%>
+     <%= f.select("priceline", ['50 000', '100 000', '200 000'], {}, { :class => 'select' })%>
   </div>
   <div class="actions search_btn">
     <%= f.submit %>

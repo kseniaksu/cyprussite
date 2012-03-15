@@ -47,19 +47,19 @@
   </div>
   <div class="field">
     <%= f.label :realtytype %><br />
-    <%= f.text_field :realtytype %>
+    <%= f.select("realtytype", ['квартира', 'офис', 'особняк', 'вилла', 'другое'])%>
   </div>
   <div class="field">
     <%= f.label :location %><br />
-    <%= f.text_field :location %>
+    <%= f.select("location", ['Лимассол'])%>
   </div>
   <div class="field">
-    <%= f.label :roomcount %><br />
-    <%= f.text_field :roomcount %>
+    <%= f.label :roomcount %><br /> 
+    <%= f.select("roomcount", ['2 спальни', '3 спальни', '4 спальни', '5 спален', '6 спален'])%>
   </div>
   <div class="field">
     <%= f.label :price %><br />
-    <%= f.number_field :price %>
+    <%= f.text_field :price %>
   </div>
   <div class="field">
     <%= f.label :fulldescription %><br />

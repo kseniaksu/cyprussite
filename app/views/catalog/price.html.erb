@@ -21,7 +21,9 @@
     <div class="catalog_container">
 	    <h1><%= link_to property.name, property %></h1>
 	    <div class="c_photo left">
+		  <div class="medium_img">
 		  <%= image_tag property.photo.url(:medium) %>
+		  </div>
 		</div>
 		<div class="left">
 		    <div class="direct_info">
@@ -44,7 +46,7 @@
 	   <div class="left">
 	        <div class="shortdescription">
 		        <p>
-	            <%= property.shortdescription %>
+	            <%= simple_format(property.shortdescription) %>
 	            </p>  
 	        </div>
         </div>

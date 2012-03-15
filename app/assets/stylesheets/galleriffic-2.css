@@ -13,7 +13,7 @@
 }
 #gallery img{
 	width: 443px;
-	height: 235px;
+	height: auto;
 	max-width: 443px;	
 }
 
@@ -116,6 +116,12 @@ div.slideshow a.advance-link {
 	text-align: center;
 	font-size: 0px;
 	
+	
+}
+.image-wrapper{
+  	width: 443px;
+	height: 235px;
+	overflow: hidden;
 }
 div.slideshow a.advance-link:hover, div.slideshow a.advance-link:active, div.slideshow a.advance-link:visited {
 	text-decoration: none;
@@ -177,6 +183,12 @@ ul.thumbs li.selected a.thumb {
 a.thumb:focus {
 	outline: none;
 }
+.thumb_img_erapper{
+	width: 93px;
+	height: 53px;
+	overflow: hidden;
+}
+
 ul.thumbs img {
 	border: none;
 	display: block;

@@ -20,8 +20,11 @@
 		<div id="thumbs" class="navigation">
 			<ul class="thumbs noscript">
 				<li>
+					
 					<a class="thumb" name="leaf"  href="<%= url_for @property.photo.url%>" title="Title #0">
+						<div class="small_img">
 						<%= image_tag @property.photo.url(:small) %>
+						</div>
 					</a>
 					<div class="caption">
 						<div class="download">
@@ -33,7 +36,9 @@
                 <%-if @property.photo1? %>
 				<li>
 					<a class="thumb" name="drop" href="<%= url_for @property.photo1.url%>" title="Title #1">
+						<div class="small_img">
 						<%= image_tag @property.photo1.url(:small)%>
+                        </div>						
 					</a>
 					<div class="download">
 						<a href= "<%= url_for @property.photo1.url%>"> </a>
@@ -44,8 +49,9 @@
                 <%-if @property.photo2? %>
 				<li>
 					<a class="thumb" href="<%= url_for @property.photo2.url%>" title="Title #2">
+						<div class="small_img">
 						<%= image_tag @property.photo2.url(:small)%>
-
+                        </div>
 					</a>
 					<div class="caption">
 						<div class="download">
@@ -57,8 +63,9 @@
                 <%-if @property.photo3? %>
 				<li class="li_last">
 					<a class="thumb" href="<%= url_for @property.photo3.url%>" title="Title #3">
+						<div class="small_img">
 						<%= image_tag @property.photo3.url(:small)%>
-
+                        </div>
 					</a>
 					<div class="caption">
 						<div class="download">
@@ -70,8 +77,9 @@
                 <%-if @property.photo4? %>
 				<li>
 					<a class="thumb" href="<%= url_for @property.photo4.url%>" title="Title #4">
+						<div class="small_img">
 						<%= image_tag @property.photo4.url(:small)%>
-
+                        </div>
 					</a>
 					<div class="caption">
 						<div class="download">
@@ -83,8 +91,9 @@
 				<%-if @property.photo5? %>
 				<li>
 					<a class="thumb" href="<%= url_for @property.photo5.url%>" title="Title #5">
+						<div class="small_img">
 						<%= image_tag @property.photo5.url(:small)%>
-
+                        </div>
 					</a>
 					<div class="caption">
 						<div class="download">
@@ -96,8 +105,9 @@
                     <%-if @property.photo6? %>
 					<li>
 						<a class="thumb" href="<%= url_for @property.photo6.url%>" title="Title #6">
+							<div class="small_img">
 							<%= image_tag @property.photo6.url(:small)%>
-
+                            </div>
 						</a>
 						<div class="caption">
 							<div class="download">
@@ -110,8 +120,9 @@
 
 				<li class="li_last">
 					<a class="thumb" href="<%= url_for @property.photo7.url%>" title="Title #7">
+						<div class="small_img">
 						<%= image_tag @property.photo7.url(:small) %>
-						
+						</div>
 					</a>
 					<div class="caption">
 						<div class="download">
@@ -157,7 +168,10 @@
 </div>
 <div class="hr"></div>
 <p>
-  <%= @property.fulldescription %>
+  <%= simple_format(@property.fulldescription) %>
+</p>
+<p>
+   INFORMATION
 </p>
 </div>
 <div style="clear: both;"></div>

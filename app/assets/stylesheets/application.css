@@ -100,6 +100,22 @@ pre {
 .clear{
 	clear: both;
 }
+.medium_img{
+	width: 154px;
+	height: 88px;
+	overflow: hidden;
+}
+.small_img{
+	width: 93px;
+	height: 53px;
+	overflow: hidden;
+}
+.onmaim_img {
+	width: 174px;
+	height: 94px;
+	overflow: hidden;
+	
+}
 /*-----------------PAGE--------------*/
 .content_page{
 	width: 880px;
@@ -252,10 +268,7 @@ ul.best_container{
 	border: 1px solid #ededed;
 	border-bottom: none;
 }
-.best_container li .best_box img{
-	width: 174px;
-	height: 94px;
-}
+
 .best_shadow {
 	width: 184px;
 	height: 20px;

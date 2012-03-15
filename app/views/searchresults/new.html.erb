@@ -97,13 +97,15 @@ $(function(){
 	<%-if property.onmain? %>
 	<li>
 		<div class="best_box">
-		  <%= link_to image_tag(property.photo.url(:medium)), property %>	
+			<div class="onmaim_img">
+		  <%= link_to image_tag(property.photo.url(:onmaim)), property %>
+		    </div>	
 		  <%#= image_tag property.photo.url(:medium) %>			  	
 	    </div>
 	    <div class="best_shadow"> 
 		</div>
 		<h2><%= link_to property.name, property, :class=>"a_title" %></h2>
-		<p><%= property.shortdescription %></p>
+		<p><%= property.observe %></p>
 	</li>
 	<% end%>
 	  <% end%>
